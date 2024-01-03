@@ -1,8 +1,8 @@
-<div id="<%= dom_id post %>">
-  <h2><%= post.title %></h2>
-  <h4>posted by <%= link_to post.user.name, user_path(post.user) %></h4>
-  <h6><%= post.views.to_s + " үзсэн" %></h6>
-  <div>
-    <%= post.body %>
+
+<div id="<%= dom_id post %>" class="card text-dark bg-light mb-3" >
+  <div class="card-header"><%= link_to post.user.name, user_path(post.user) %></div>
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to post.title, post_path(post), class:"post-title"%></h5>
+    <p class="card-text"><%= post.body %></p>
   </div>
 </div>
